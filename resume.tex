@@ -1,0 +1,188 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{fancyhdr}
+\usepackage[english,printdayoff]{isodate}
+\isodash{-}%
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\makeatletter
+\def\myrev{Next Review Date:}
+\def\ps@lastpage{%
+  \let\@oddhead\@empty\let\@evenhead\@empty%
+  \def\@oddfoot{{\slshape\myrev}\hfil\thepage}%
+  \def\@evenfoot{{\slshape\myrev}\hfil\thepage}%
+  }
+\makeatother
+
+\name{Simone Perriello} % Your name
+\begin{document}
+\begin{mytabular}
+   \row{Date of Birth}{July, 25th 1989}
+   % \row{Citizenship}{Italian}
+   \row{Academic email}{simone.perriello@polimi.it}
+   \row{Personal email}{simone.perriello@protonmail.com}
+   % \row{Phone number}{(+39)3925266101}
+\end{mytabular}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+% PHD
+\textbf{Ph.D. Student} \hfill \textit{since November 2019}
+\\ Enrolled in Ph.D program in Information Technology at Politecnico di Milano 
+\\ Thesis title: \textit{Quantum Computing Algorithms: functional validation and performance assessment}
+\\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}
+\\
+\\
+% MASTER
+\textbf{M.Sc.\ degree} \hfill \textit{April 2019} 
+\\ Master of Science in Computer Science and Engineering at Politecnico di Milano
+\\ Thesis title: \textit{Design and developments of quantum circuits to solve the Information Set Decoding problem}
+\\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}; Grade: 110/110
+\\
+\\
+% IELTS
+\textbf{IELTS} \hfill \textit{February 2016}
+\\ Grade 7.5/9 (equivalent to C1 of the CEFR)
+\\
+\end{rSection}
+%--------------------------------------------------------------------------------
+%    RESEARCH
+%-----------------------------------------------------------------------------------------------
+\begin{rSection}{Research interests}
+  My research revolves around the quantum computing field; at the moment, I am
+  focusing on the design and development of new algorithms and the analysis of
+  their complexity.
+
+  My Ms.C. thesis was focused on the Information Set Decoding problem, up to now
+  the most efficient attack against cryptosystems based on linear codes. With
+  the help of my advisors, I designed a quantum version of this kind of attack,
+  that relies at its core on a modified version of Grover's algorithm. The
+  proposed algorithm was completedly implemented and tested with linear codes of
+  different sizes using the IBM's Qiskit framework.
+
+  During my months as an intern at Atos, I mainly focused on the exploration of
+  algorithms for Noisy Intermediate-Scale Quantum (NISQ) architectures, that are
+  probably the only type of Quantum Processing Unit (QPU) that will be available
+  in the near-term future. In this field, I am trying to explore the power of
+  the Quantum Approximate Optimization Algorithm (QAOA), which may be used to
+  efficiently solve combinatorial optimization problems with the aid of the
+  aforementioned NISQ computeres.
+
+  My Ph.D.\ research activities, supervised by Prof.\ Gerardo Pelosi and Prof.\
+  Alessandro Barenghi, revolved around the topic of Post-Quantum cryptography.
+  Notably, one of the major quest in the quantum and cryptography communities is
+  the evaluation of new cryptographic standards capable of resisting to attacks
+  from quantum accelerated computers. The search is witnessed by the call for
+  standard carried out by, among the others, the National Institute of Standards
+  and Technology (NIST), that is expected to lead to draft of standards
+  available by the end of 2023. For this reason, practical evaluation of the
+  computational complexity required to attack the proposed Post-Quantum
+  cryptoschemes will be carried out during the research activity.
+
+  % Finally, the quantification of the speed-up attainable in solving problems which remain computationally hard even with a quantum computer being available (e.g., problems characterizing cryptanalytic tasks, such as the subset sum problem), will be tackled.
+
+% today is around algorithms for Noise
+% %%%%
+% The research activity will focus on the following topics: the development of new quantum algorithms, the analysis of their complexity, practical feasibility and scalability on the Quantum Learning Machine provided by AtoS, and applications of quantum techniques to problems in classical computer science and mathematics.
+
+% Currently, it is an open question if quantum heuristics can outperform classical approximation techniques. Aiming to advance the state-of-the-art, the investigation will start from the study of the Quantum Approximate Optimization Algorithms (QAOA), to efficiently solve combinatorial optimization problems with the aid of quantum computers.
+
+% Given the interest in the research community for quantum computer technologies, named Noisy Intermediate-Scale Quantum (NISQ), having 50 qubits or more and not equipped with fully developed error correction mechanisms, the said optimization algorithms will be tackled to fit also computations in the NISQ technology.
+
+% Finally, the quantification of the speed-up attainable in solving problems which remain computationally hard even with a quantum computer being available (e.g., problems characterizing cryptanalytic tasks, such as the subset sum problem), will be tackled.
+
+% %%%%
+% In recent times, I am investigating the power of quantum computers, with a special 
+% focus on cryptography. For my master thesis, I learned how to use the Qiskit 
+% framework, proposing patches to Aqua. 
+
+% I have extensively use Qiskit to implement several quantum circuits to solve
+% the Information Set Decoding problem, one of the key aspects of post-quantum
+% cryptography.
+
+% While waiting to invest all the energies on my Ph.D. research on quantum computing,
+% I am working as an intern at Atos. These months of work helped me to consolidate
+% my knowledge on the topic, to see the state of the art of quantum simulation and to
+% test all the new improvements made to the QLM project.
+\end{rSection}
+\clearpage
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{Technical Strengths}
+% % PYTHON
+% % QUANTUM
+% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+% Modeling and Analysis \ & AutoCad, Revit, StaadPro \\
+% Software \& Tools & MS Office, Latex \\
+% \end{tabular}
+% 
+% \end{rSection}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+% R&D Bull SAS
+% \begin{rSubsection}{Atos: Bull SAS R\&D Labs}{February 2020--July 2020}{Quantum computing researcher}{Les Clayes-sous-Bois}
+  \begin{rSubsection}{Atos: Bull SAS R\&D Labs}{\origdate\daterange{2020-01-02}{2020-07-31}}{Quantum computing researcher}{Les Clayes-sous-Bois}
+\item Researched and explored state-of-the-art quantum algorithms and technologies, under the direct supervision of Bertrand Marchand and Cyril Allouche. 
+\item Tested and implemented the algorithms on the \textit{Atos Quantum Learning Machine} simulator.
+\end{rSubsection}
+
+% ATOS QUANTUM
+% \begin{rSubsection}{Atos: HPC \& Quantum team}{July 2019--January 2020}{Quantum computing researcher}{Milano}
+\begin{rSubsection}{Atos: HPC \& Quantum team}{\origdate\daterange{2019-07-01}{2020-01-31}}{Quantum computing researcher}{Milano}
+\item Configured both the hardware and software of the \textit{Atos Quantum Learning Machine} appliance.
+\item Used the \textit{Atos Quantum Learning Machine} software simulation stack to develop well-known quantum algorithms.
+\item Taken internal courses on the advanced usage of the \textit{Atos Quantum Learning Machine}.
+\item Lectured external customers on the \textit{Atos Quantum Learning Machine} software stack.
+\end{rSubsection}
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	TEACHING
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Teaching Experience}
+  \begin{rSubsection}{Teaching tutor}{2021}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+  \item Held 34 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
+  \end{rSubsection}
+
+\begin{rSubsection}{Teaching tutor}{2020}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+\item Held 29 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
+\end{rSubsection}
+
+\begin{rSubsection}{Teaching tutor}{2019}{Computer Science}{Prof.\ Andrea Bonarini}
+\item Held 20 hours of theory lectures and lab exercises on the C programming language.
+% https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=691950&polij_device_category=DESKTOP&__pj0=0&__pj1=ee13b0b6c0f983f39edcd5af2ad25bd3
+\end{rSubsection}
+
+\begin{rSubsection}{Teaching tutor}{2018}{Computer Architectures and Operating Systems}{Prof.\ Anna Maria Antola}
+\item Held 25 hours of theory lectures and lab exercises regarding both the architectures of modern computers (ranging from the assembly language to the logic gates) and the structure of an operating system (including the theory of parallel programming and threads management in Linux)
+% https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=667442&polij_device_category=DESKTOP&__pj0=0&__pj1=f7cded5163ff00a70c340961c9ce685c
+\end{rSubsection}
+\end{rSection}
+\vfill
+% \input{gdpr_en}
+% \input{gdpr_it}
+\end{document}
