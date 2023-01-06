@@ -23,6 +23,9 @@
 \isodash{-}%
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newif\ifpublic{}
+% by default it is set to false
+\publicfalse{}
 
 \makeatletter
 \def\myrev{Next Review Date:}
@@ -33,24 +36,36 @@
   }
 \makeatother
 
+
 \name{Simone Perriello} % Your name
 \begin{document}
-\begin{mytabular}
-   \row{Date of Birth}{July, 25th 1989}
-   % \row{Citizenship}{Italian}
-   \row{Academic email}{simone.perriello@polimi.it}
-   \row{Personal email}{simone.perriello@protonmail.com}
-   % \row{Phone number}{(+39)3925266101}
-\end{mytabular}
+\ifpublic{%
+    \begin{mytabular}
+      \row{Academic email}{simone.perriello@polimi.it}
+    \end{mytabular}%
+  }
+\else{%
+    \begin{mytabular}
+      % \row{Date of Birth}{July, 25th 1989}
+      % \row{Citizenship}{Italian}
+      \row{Academic email}{simone.perriello@polimi.it}
+      % \row{Personal email}{simone.perriello@protonmail.com}
+      \row{Personal email}{sperriello@proton.me}
+      \row{Github page}{github.com/tigerjack}
+      % \row{Phone number}{(+39)3925266101}
+      \row{Website}{https://perriello.faculty.polimi.it}
+    \end{mytabular}%
+  }
+\fi
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Education}
 % PHD
-\textbf{Ph.D. Student} \hfill \textit{since November 2019}
+\textbf{Ph.D. Candidate} \hfill \textit{since November 2019}
 \\ Enrolled in Ph.D program in Information Technology at Politecnico di Milano 
-\\ Thesis title: \textit{Quantum Computing Algorithms: functional validation and performance assessment}
+\\ Thesis title: \textit{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
 \\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}
 \\
 \\
@@ -70,35 +85,47 @@
 %    RESEARCH
 %-----------------------------------------------------------------------------------------------
 \begin{rSection}{Research interests}
-  My research revolves around the quantum computing field; at the moment, I am
-  focusing on the design and development of new algorithms and the analysis of
-  their complexity.
+  My research lies at the intersection of the \textbf{quantum computing} and the
+  \textbf{cryptography} fields. In the last years, I have been focusing on the
+  design and development of quantum algorithms to attack code-based
+  cryptosystems, undermining their alleged security.
 
-  My Ms.C. thesis was focused on the Information Set Decoding problem, up to now
-  the most efficient attack against cryptosystems based on linear codes. With
-  the help of my advisors, I designed a quantum version of this kind of attack,
-  that relies at its core on a modified version of Grover's algorithm. The
-  proposed algorithm was completedly implemented and tested with linear codes of
-  different sizes using the IBM's Qiskit framework.
+  During my Ms.C. thesis, I designed a quantum version of the classical
+  Information Set Decoding (ISD) strategy, the most efficient kind of attack
+  against cryptosystems based on linear codes. The proposed algorithm was
+  implemented and tested with linear codes of various types and sizes using the
+  IBM's Qiskit framework. In doing so, as the Qiskit contributor list attests, I
+  implemented a few patches for the Aqua framework.
 
-  During my months as an intern at Atos, I mainly focused on the exploration of
-  algorithms for Noisy Intermediate-Scale Quantum (NISQ) architectures, that are
-  probably the only type of Quantum Processing Unit (QPU) that will be available
-  in the near-term future. In this field, I am trying to explore the power of
-  the Quantum Approximate Optimization Algorithm (QAOA), which may be used to
-  efficiently solve combinatorial optimization problems with the aid of the
-  aforementioned NISQ computeres.
+  During my 6 months as an intern at Atos, I mainly focused on improving the
+  simulation capabilities of algorithms targeting Noisy Intermediate-Scale
+  Quantum (NISQ) architectures. In doing so, I developed a new
+  general-purpose quantum simulation library from scratch that, by trading off simulation
+  time and simulation space, was capable of simulating hundred of qubits.
 
-  My Ph.D.\ research activities, supervised by Prof.\ Gerardo Pelosi and Prof.\
-  Alessandro Barenghi, revolved around the topic of Post-Quantum cryptography.
-  Notably, one of the major quest in the quantum and cryptography communities is
-  the evaluation of new cryptographic standards capable of resisting to attacks
-  from quantum accelerated computers. The search is witnessed by the call for
-  standard carried out by, among the others, the National Institute of Standards
-  and Technology (NIST), that is expected to lead to draft of standards
-  available by the end of 2023. For this reason, practical evaluation of the
-  computational complexity required to attack the proposed Post-Quantum
-  cryptoschemes will be carried out during the research activity.
+  My Ph.D.\ research activities revolve around the \textbf{quantum
+    cryptanalysis} of Post-Quantum Cryptography (\textbf{PQC}). Notably, one of
+  the major quest in the quantum and cryptography communities is the assessment
+  of new cryptographic standards capable of resisting to attacks from quantum
+  accelerated computers. The search is witnessed by the call for standard borne
+  out by the National Institute of Standards and Technology (\textbf{NIST}),
+  that is expected to lead to draft of standards by the end of 2023. For this
+  reason, I conducted practical evaluations in terms of circuit width and depth
+  of the computational complexity required to attack all the code-based
+  finalists of the NIST competition. An exhaustive comparison against both
+  theoretical and concrete previous implementations testified that my quantum
+  algorithms decreased the security level of all cryptoschemes by 19 to 30 bits.
+  In the process, I exploited the several implementations of the \textbf{Dicke}
+  state carried out by \textbf{B{\"a}rtschi}, and I also implemented several
+  quantum circuits that can be of unrelated interests --- to sort bitstrings, to
+  permute matrix columns, to perform Gauss-Jordan Elimination on a matrix, and
+  to check the weight of a given bitstring.
+
+  % In the same work, I
+  % also presented different techniques to parallelize the algorithms across
+  % multiple Quantum Processing Unitss. In doing so, I confirmed the concerns
+  % brought forward by the latest NIST report on the security of one of the
+  % proposed cryptoschemes when a parallel approach is used.
 
   % Finally, the quantification of the speed-up attainable in solving problems which remain computationally hard even with a quantum computer being available (e.g., problems characterizing cryptanalytic tasks, such as the subset sum problem), will be tackled.
 
@@ -142,10 +169,11 @@
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
+% NOTE Dates are in US format
 \begin{rSection}{Work Experience}
 % R&D Bull SAS
 % \begin{rSubsection}{Atos: Bull SAS R\&D Labs}{February 2020--July 2020}{Quantum computing researcher}{Les Clayes-sous-Bois}
-  \begin{rSubsection}{Atos: Bull SAS R\&D Labs}{\origdate\daterange{2020-01-02}{2020-07-31}}{Quantum computing researcher}{Les Clayes-sous-Bois}
+  \begin{rSubsection}{Atos: Bull SAS R\&D Labs}{\origdate\daterange{2020-02-01}{2020-07-31}}{Quantum computing researcher}{Les Clayes-sous-Bois}
 \item Researched and explored state-of-the-art quantum algorithms and technologies, under the direct supervision of Bertrand Marchand and Cyril Allouche. 
 \item Tested and implemented the algorithms on the \textit{Atos Quantum Learning Machine} simulator.
 \end{rSubsection}
@@ -164,25 +192,50 @@
 %	TEACHING
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Teaching Experience}
-  \begin{rSubsection}{Teaching tutor}{2021}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
-  \item Held 34 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
+
+  \begin{rSubsection}{Teaching assistant}{2021-23}{Informatica (per Aerospaziali)}{Prof.\ Gerardo Pelosi}
+  \item Exercise lectures: computer science for Aerospace Engineering.
+  \item Topics addressed (partial): Boolean logic and basics of C programming.
+  \end{rSubsection}
+  \begin{rSubsection}{Teaching assistant}{2020-23}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+  \item Exercise lectures: Linux Operating Systems.
+  \item Topics addressed (partial): parallel programming (processes, threads),
+    task scheduler, system calls and interrupt routines, memory management, file
+    systems and I/O.
   \end{rSubsection}
 
-\begin{rSubsection}{Teaching tutor}{2020}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
-\item Held 29 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
-\end{rSubsection}
+  % \begin{rSubsection}{Teaching assistant}{2020}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+  % \item Held 29 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
+  % \end{rSubsection}
+%   \begin{rSubsection}{Teaching assistant}{2022}{Informatica (per Aerospaziali)}{Prof.\ Gerardo Pelosi}
+%   \item Held 18 hours of exercise lectures. Among the topics addressed:
+%     Boolean logic and basics of C programming  
+%   \end{rSubsection}
+%   \begin{rSubsection}{Teaching assistant}{2021}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+%   \item Held 34 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
+%   \end{rSubsection}
 
-\begin{rSubsection}{Teaching tutor}{2019}{Computer Science}{Prof.\ Andrea Bonarini}
-\item Held 20 hours of theory lectures and lab exercises on the C programming language.
+% \begin{rSubsection}{Teaching assistant}{2020}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+% \item Held 29 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
+% \end{rSubsection}
+
+\begin{rSubsection}{Teaching tutor}{2019}{Informatica (per Ambientali)}{Prof.\ Andrea Bonarini}
+\item Theory lectures and laboratory exercises on the C programming language.
 % https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=691950&polij_device_category=DESKTOP&__pj0=0&__pj1=ee13b0b6c0f983f39edcd5af2ad25bd3
 \end{rSubsection}
 
 \begin{rSubsection}{Teaching tutor}{2018}{Computer Architectures and Operating Systems}{Prof.\ Anna Maria Antola}
-\item Held 25 hours of theory lectures and lab exercises regarding both the architectures of modern computers (ranging from the assembly language to the logic gates) and the structure of an operating system (including the theory of parallel programming and threads management in Linux)
+\item Theory lectures and lab exercises regarding both the architectures of
+  modern computers (ranging from the assembly language to the logic gates) and
+  the structure of an operating system (including the theory of parallel
+  programming and threads management in Linux)
 % https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=667442&polij_device_category=DESKTOP&__pj0=0&__pj1=f7cded5163ff00a70c340961c9ce685c
 \end{rSubsection}
 \end{rSection}
 \vfill
-% \input{gdpr_en}
-% \input{gdpr_it}
+\ifpublic{%
+    \input{gdpr_en}
+    \input{gdpr_it}
+  }
+\fi
 \end{document}
