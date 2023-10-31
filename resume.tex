@@ -63,21 +63,21 @@
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Education}
 % PHD
-\textbf{Ph.D. Candidate} \hfill \textit{since November 2019}
+\item{Ph.D. Candidate} \hfill \textit{since November 2019}
 \\ Enrolled in Ph.D program in Information Technology at Politecnico di Milano 
 \\ Thesis title: \textit{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
 \\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}
 \\
 \\
 % MASTER
-\textbf{M.Sc.\ degree} \hfill \textit{April 2019} 
+\item{M.Sc.\ degree} \hfill \textit{April 2019} 
 \\ Master of Science in Computer Science and Engineering at Politecnico di Milano
 \\ Thesis title: \textit{Design and developments of quantum circuits to solve the Information Set Decoding problem}
 \\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}; Grade: 110/110
 \\
 \\
 % IELTS
-\textbf{IELTS} \hfill \textit{February 2016}
+\item{IELTS} \hfill \textit{February 2016}
 \\ Grade 7.5/9 (equivalent to C1 of the CEFR)
 \\
 \end{rSection}
@@ -85,74 +85,39 @@
 %    RESEARCH
 %-----------------------------------------------------------------------------------------------
 \begin{rSection}{Research interests}
-  My research lies at the intersection of the \textbf{quantum computing} and the
-  \textbf{cryptography} fields. In the last years, I have been focusing on the
-  design and development of quantum algorithms to attack code-based
-  cryptosystems, undermining their alleged security.
+  My research spans the domains of \emph{quantum computing} and
+  \emph{cryptography}, with a primary focus on designing quantum algorithms
+  based on the gate model to attack code-based cryptosystems.
 
-  During my Ms.C. thesis, I designed a quantum version of the classical
-  Information Set Decoding (ISD) strategy, the most efficient kind of attack
-  against cryptosystems based on linear codes. The proposed algorithm was
-  implemented and tested with linear codes of various types and sizes using the
-  IBM's Qiskit framework. In doing so, as the Qiskit contributor list attests, I
-  implemented a few patches for the Aqua framework.
+  During my Master's program, I embarked on a self-guided exploration of quantum
+  computing. This journey culminated in my thesis, where I developed a quantum
+  adaptation of the \emph{Information Set Decoding (ISD)} method, renowned for
+  its efficiency in breaching cryptosystems based on linear codes.
 
-  During my 6 months as an intern at Atos, I mainly focused on improving the
-  simulation capabilities of algorithms targeting Noisy Intermediate-Scale
-  Quantum (NISQ) architectures. In doing so, I developed a new general-purpose
-  quantum simulation library from scratch that, by trading off simulation time
-  and simulation space, was capable of simulating hundred of qubits and to
-  replicate the experimental results shown by \textbf{Cerezo et al. 2020}.
+  During my internship at Atos, I extended my research by enhancing quantum
+  algorithm simulations for Noisy Intermediate-Scale Quantum (NISQ)
+  architectures. I created a versatile quantum simulation library capable of
+  simulating systems with hundreds of qubits and replicated experimental results
+  related to the challenging \emph{barren plateau problem} in quantum neural
+  networks.
 
-  My Ph.D.\ research activities revolve around the \textbf{quantum
-    cryptanalysis} of Post-Quantum Cryptography (\textbf{PQC}). Notably, one of
-  the major quest in the quantum and cryptography communities is the assessment
-  of new cryptographic standards capable of resisting to attacks from quantum
-  accelerated computers. The search is witnessed by the call for standard borne
-  out by the National Institute of Standards and Technology (\textbf{NIST}),
-  that is expected to lead to draft of standards by the end of 2023. For this
-  reason, I conducted practical evaluations in terms of circuit width and depth
-  of the computational complexity required to attack all the code-based
-  finalists of the NIST competition. An exhaustive comparison against both
-  theoretical and concrete previous implementations testified that my quantum
-  algorithms decreased the security level of all cryptoschemes by 19 to 30 bits.
-  In the process, I exploited the several implementations of the \textbf{Dicke}
-  state carried out by \textbf{B{\"a}rtschi}, and I also implemented several
-  quantum circuits that can be of unrelated interests --- to sort bitstrings, to
-  permute matrix columns, to perform Gauss-Jordan Elimination on a matrix, and
-  to check the weight of a given bitstring.
+  My Ph.D.\ research centered on quantum cryptanalysis of Post-Quantum
+  Cryptography (PQC). I proposed the first complete design of quantum circuits
+  tailored to attack the hardness assumptions in code-based crpytography,
+  evaluating the computational complexity of attacking all the code-based
+  cryptosystems currently under international scrutiny.
+  %
+  Comprehensive assessments and comparisons, which considered both theoretical
+  and practical implementations for quantum ISD introduced in the years
+  following my initial work, confirmed the substantial advantage of my
+  contribution, with performance surpassing other approaches by a significant
+  margin, ranging from $2^{19}$ to $2^{30}$.
 
-  % In the same work, I
-  % also presented different techniques to parallelize the algorithms across
-  % multiple Quantum Processing Unitss. In doing so, I confirmed the concerns
-  % brought forward by the latest NIST report on the security of one of the
-  % proposed cryptoschemes when a parallel approach is used.
+  During this process, I also designed a range of practical quantum circuits
+  that can be of independent interests --- to sort bitstrings, to permute matrix
+  columns, to perform Gauss-Jordan Elimination on a matrix, and to check the
+  weight of a given bitstring.
 
-  % Finally, the quantification of the speed-up attainable in solving problems which remain computationally hard even with a quantum computer being available (e.g., problems characterizing cryptanalytic tasks, such as the subset sum problem), will be tackled.
-
-% today is around algorithms for Noise
-% %%%%
-% The research activity will focus on the following topics: the development of new quantum algorithms, the analysis of their complexity, practical feasibility and scalability on the Quantum Learning Machine provided by AtoS, and applications of quantum techniques to problems in classical computer science and mathematics.
-
-% Currently, it is an open question if quantum heuristics can outperform classical approximation techniques. Aiming to advance the state-of-the-art, the investigation will start from the study of the Quantum Approximate Optimization Algorithms (QAOA), to efficiently solve combinatorial optimization problems with the aid of quantum computers.
-
-% Given the interest in the research community for quantum computer technologies, named Noisy Intermediate-Scale Quantum (NISQ), having 50 qubits or more and not equipped with fully developed error correction mechanisms, the said optimization algorithms will be tackled to fit also computations in the NISQ technology.
-
-% Finally, the quantification of the speed-up attainable in solving problems which remain computationally hard even with a quantum computer being available (e.g., problems characterizing cryptanalytic tasks, such as the subset sum problem), will be tackled.
-
-% %%%%
-% In recent times, I am investigating the power of quantum computers, with a special 
-% focus on cryptography. For my master thesis, I learned how to use the Qiskit 
-% framework, proposing patches to Aqua. 
-
-% I have extensively use Qiskit to implement several quantum circuits to solve
-% the Information Set Decoding problem, one of the key aspects of post-quantum
-% cryptography.
-
-% While waiting to invest all the energies on my Ph.D. research on quantum computing,
-% I am working as an intern at Atos. These months of work helped me to consolidate
-% my knowledge on the topic, to see the state of the art of quantum simulation and to
-% test all the new improvements made to the QLM project.
 \end{rSection}
 \clearpage
 %----------------------------------------------------------------------------------------
