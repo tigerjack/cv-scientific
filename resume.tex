@@ -26,6 +26,8 @@
 \usepackage{fancyhdr}
 \usepackage[english,printdayoff]{isodate}
 \isodash{-}%
+% \newcommand{\yearrange}[2]{#1--\ifnum#2>99\relax\else#1\fi\the\numexpr#1+#2\relax}
+
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \setlength{\tabcolsep}{18pt}
@@ -34,6 +36,7 @@
     \tabular{ll}}
   {\endtabular\endtrivlist}
 \newcommand{\row}[2]{\textit{#1}&#2\\}
+\usepackage{hyperref}
 \usepackage[%
 autocite     = plain,
 backend      = biber,
@@ -96,24 +99,23 @@ block=space,
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Education}
-% PHD
-\textbf{Ph.D. Candidate} \hfill \textit{since November 2019}
-\\ Enrolled in Ph.D program in Information Technology at \emph{Politecnico di Milano}
-\\ Thesis title: \textit{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
-\\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}
-\\
-\\
-% MASTER
-\textbf{M.Sc.\ degree} \hfill \textit{April 2019}
-\\ Master of Science in Computer Science and Engineering at \emph{Politecnico di Milano}
-\\ Thesis title: \textit{Design and developments of quantum circuits to solve the Information Set Decoding problem}
-\\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}; Grade: 110/110
-\\
-\\
-% IELTS
-\textbf{IELTS} \hfill \textit{February 2016}
-\\ Grade 7.5/9 (equivalent to C1 of the CEFR)
-\\
+  % PHD
+  \begin{rSubsection}{Politecnico di Milano}{since \printdate{2019-11-01}}{Ph.D.\ candidate}{Milan}
+  \item Thesis title: \emph{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
+  \item Advisors: Prof.\ \emph{Gerardo Pelosi}; Prof.\ \emph{Alessandro Barenghi}
+  \end{rSubsection}
+  % MASTER
+  \begin{rSubsection}{Politecnico di Milano}{\printdate{2019-04-17}}{M.Sc.\ degree}{Milan}
+  \item Thesis title: \emph{Design and developments of quantum circuits to solve the Information Set Decoding problem}
+  \item Advisors: Prof.\ \emph{Gerardo Pelosi}; Prof.\ \emph{Alessandro
+      Barenghi}
+  \item Grade: 110/110
+  \end{rSubsection}
+  % 
+  \begin{rSubsection}{IELTS}{\printdate{2016-02-01}}{English certificate}{}
+  \item Thesis title: \textit{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
+  \item Grade 7.5/9 (equivalent to C1 of CEFR)
+  \end{rSubsection}
 \end{rSection}
 %--------------------------------------------------------------------------------
 %    RESEARCH
@@ -199,36 +201,36 @@ block=space,
 %	TEACHING
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Teaching Experience}
-
-  \begin{rSubsection}{Teaching assistant}{2020-21;\ 21-22;\ 22-23;\ 23-24}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+  % \begin{rSubsection}{Teaching assistant}{2020-21;\ 21-22;\ 22-23;\ 23-24}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+  \begin{rSubsection}{Teaching assistant}{\daterange{2020-11-01}{2023-12-31}}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
   \item Exercise lectures: Linux Operating Systems.
   \item Topics addressed (partial): parallel programming (processes, threads),
     task scheduler, system calls and interrupt routines, memory management, file
     systems and I/O.
   \end{rSubsection}
-  \begin{rSubsection}{Teaching assistant}{2021-22;\ 22-23;\ 23-24}{Computer Architectures and
+  \begin{rSubsection}{Teaching assistant}{\daterange{2022-11-01}{2024-01-31}}{Computer Architectures and
       Operating Systems}{Prof.ssa Cristina Silvano }
   \item Exercise lectures: Linux Operating Systems.
   \item Topics addressed (partial): parallel programming (processes, threads),
     task scheduler, system calls and interrupt routines, memory management, file
     systems and I/O.
   \end{rSubsection}
-  \begin{rSubsection}{Teaching assistant}{2023-24}{Computer Architectures and
+  \begin{rSubsection}{Teaching assistant}{\daterange{2023-11-01}{2024-01-31}}{Computer Architectures and
       Operating Systems}{Prof. Federico Terraneo }
   \item Exercise lectures: Linux Operating Systems.
   \item Topics addressed (partial): parallel programming (processes, threads),
     task scheduler, system calls and interrupt routines, memory management, file
     systems and I/O.
   \end{rSubsection}
-  \begin{rSubsection}{Teaching assistant}{2021-22;\ 22-23}{Informatica (per Aerospaziali)}{Prof.\ Gerardo Pelosi}
+  \begin{rSubsection}{Teaching assistant}{\daterange{2021-11-01}{2022-06-30}}{Informatica (per Aerospaziali)}{Prof.\ Gerardo Pelosi}
   \item Exercise lectures: computer science for Aerospace Engineering.
   \item Topics addressed (partial): Boolean logic and basics of C programming.
   \end{rSubsection}
-\begin{rSubsection}{Teaching tutor}{2019}{Informatica (per Ambientali)}{Prof.\ Andrea Bonarini}
+\begin{rSubsection}{Teaching tutor}{\daterange{2018-11-24}{2019-01-17}}{Informatica (per Ambientali)}{Prof.\ Andrea Bonarini}
 \item Theory lectures and laboratory exercises on the C programming language.
 % https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=691950&polij_device_category=DESKTOP&__pj0=0&__pj1=ee13b0b6c0f983f39edcd5af2ad25bd3
 \end{rSubsection}
-\begin{rSubsection}{Teaching tutor}{2018}{Computer Architectures and Operating Systems}{Prof.ssa Anna Maria Antola}
+\begin{rSubsection}{Teaching tutor}{\daterange{2016-11-31}{2017-01-31}}{Computer Architectures and Operating Systems}{Prof.ssa Anna Maria Antola}
 \item Theory lectures and lab exercises regarding both the architectures of
   modern computers (ranging from the assembly language to the logic gates) and
   the structure of an operating system (including the theory of parallel
