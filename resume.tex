@@ -16,25 +16,59 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-\documentclass{resume} % Use the custom resume.cls style
-\usepackage[left=0.7in,top=0.6in,right=0.7in,bottom=0.6in]{geometry} % Document margins
+\documentclass[
+	a4paper, % Uncomment for A4 paper size (default is US letter)
+	11pt, % Default font size, can use 10pt, 11pt or 12pt
+]{resume} % Use the resume class
+
+\usepackage{ebgaramond} % Use the EB Garamond font
+% \usepackage[left=0.7in,top=0.6in,right=0.7in,bottom=0.6in]{geometry} % Document margins
 \usepackage{fancyhdr}
 \usepackage[english,printdayoff]{isodate}
 \isodash{-}%
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\setlength{\tabcolsep}{18pt}
+\newenvironment{mytabular}
+  {\trivlist\item
+    \tabular{ll}}
+  {\endtabular\endtrivlist}
+\newcommand{\row}[2]{\textit{#1}&#2\\}
+\usepackage[%
+autocite     = plain,
+backend      = biber,
+doi          = true,
+url          = true,
+giveninits   = true,
+hyperref     = true,
+maxbibnames  = 99,
+maxcitenames = 99,
+sortcites    = true,
+sortlocale   = en-GB,
+% style        = alphabetic,
+style        = iso-alphabetic,
+language=english,
+% next two for bibliography overfull
+% https://tex.stackexchange.com/a/442317/80949 block=ragged,
+block=space,
+]{biblatex}
+\addbibresource{papers.bib}
+\addbibresource{reviews.bib}
+
+\usepackage{enumitem}
+
 \newif\ifpublic{}
 % by default it is set to false
 \publicfalse{}
 
-\makeatletter
-\def\myrev{Next Review Date:}
-\def\ps@lastpage{%
-  \let\@oddhead\@empty\let\@evenhead\@empty%
-  \def\@oddfoot{{\slshape\myrev}\hfil\thepage}%
-  \def\@evenfoot{{\slshape\myrev}\hfil\thepage}%
-  }
-\makeatother
+% \makeatletter
+% \def\myrev{Next Review Date:}
+% \def\ps@lastpage{%
+%   \let\@oddhead\@empty\let\@evenhead\@empty%
+%   \def\@oddfoot{{\slshape\myrev}\hfil\thepage}%
+%   \def\@evenfoot{{\slshape\myrev}\hfil\thepage}%
+%   }
+% \makeatother
 
 
 \name{Simone Perriello} % Your name
@@ -46,13 +80,13 @@
   }
 \else{%
     \begin{mytabular}
-      % \row{Date of Birth}{July, 25th 1989}
-      % \row{Citizenship}{Italian}
+          %   \row{Date of Birth}{July, 25th 1989}
+          %   \row{Citizenship}{Italian}
       \row{Academic email}{simone.perriello@polimi.it}
-      % \row{Personal email}{simone.perriello@protonmail.com}
+          %   \row{Personal email}{simone.perriello@protonmail.com}
       \row{Personal email}{sperriello@proton.me}
-      \row{Github page}{github.com/tigerjack}
-      % \row{Phone number}{(+39)3925266101}
+      % \row{Github page}{github.com/tigerjack}
+      \row{Phone number}{(+39) 02 2399 9047}
       \row{Website}{https://perriello.faculty.polimi.it}
     \end{mytabular}%
   }
@@ -63,21 +97,21 @@
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Education}
 % PHD
-\item{Ph.D. Candidate} \hfill \textit{since November 2019}
-\\ Enrolled in Ph.D program in Information Technology at Politecnico di Milano 
+\textbf{Ph.D. Candidate} \hfill \textit{since November 2019}
+\\ Enrolled in Ph.D program in Information Technology at \emph{Politecnico di Milano}
 \\ Thesis title: \textit{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
 \\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}
 \\
 \\
 % MASTER
-\item{M.Sc.\ degree} \hfill \textit{April 2019} 
-\\ Master of Science in Computer Science and Engineering at Politecnico di Milano
+\textbf{M.Sc.\ degree} \hfill \textit{April 2019}
+\\ Master of Science in Computer Science and Engineering at \emph{Politecnico di Milano}
 \\ Thesis title: \textit{Design and developments of quantum circuits to solve the Information Set Decoding problem}
 \\ Advisor Prof.\ \textit{Gerardo Pelosi}; Co-Advisor Prof.\ \textit{Alessandro Barenghi}; Grade: 110/110
 \\
 \\
 % IELTS
-\item{IELTS} \hfill \textit{February 2016}
+\textbf{IELTS} \hfill \textit{February 2016}
 \\ Grade 7.5/9 (equivalent to C1 of the CEFR)
 \\
 \end{rSection}
@@ -90,22 +124,25 @@
   based on the gate model to attack code-based cryptosystems.
 
   During my Master's program, I embarked on a self-guided exploration of quantum
-  computing. This journey culminated in my thesis, where I developed a quantum
-  adaptation of the \emph{Information Set Decoding (ISD)} method, renowned for
-  its efficiency in breaching cryptosystems based on linear codes.
+  computing. This journey culminated in my thesis, during which I developed a
+  quantum adaptation of the \emph{Information Set Decoding (ISD)} strategy, the
+  most efficient kind of attack against cryptosystems based on linear codes. The
+  implementation of those attacks was based on IBM's open source Qiskit
+  framework, to which I also contributed several patches.
 
   During my internship at Atos, I extended my research by enhancing quantum
   algorithm simulations for Noisy Intermediate-Scale Quantum (NISQ)
   architectures. I created a versatile quantum simulation library capable of
-  simulating systems with hundreds of qubits and replicated experimental results
-  related to the challenging \emph{barren plateau problem} in quantum neural
-  networks.
+  simulating systems with hundreds of qubits, targeted for the Atos' Quantum
+  Learning Machine environment. The library was extensively used to replicate
+  state of the art experimental results related to the challenging \emph{barren
+    plateau problem} in quantum neural networks.
 
-  My Ph.D.\ research centered on quantum cryptanalysis of Post-Quantum
+  My Ph.D.\ research centered on \emph{quantum cryptanalysis} of Post-Quantum
   Cryptography (PQC). I proposed the first complete design of quantum circuits
   tailored to attack the hardness assumptions in code-based crpytography,
   evaluating the computational complexity of attacking all the code-based
-  cryptosystems currently under international scrutiny.
+  cryptosystems under international scrutiny.
   %
   Comprehensive assessments and comparisons, which considered both theoretical
   and practical implementations for quantum ISD introduced in the years
@@ -130,7 +167,7 @@
 % Modeling and Analysis \ & AutoCad, Revit, StaadPro \\
 % Software \& Tools & MS Office, Latex \\
 % \end{tabular}
-% 
+%
 % \end{rSection}
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -140,17 +177,21 @@
 % R&D Bull SAS
 % \begin{rSubsection}{Atos: Bull SAS R\&D Labs}{February 2020--July 2020}{Quantum computing researcher}{Les Clayes-sous-Bois}
   \begin{rSubsection}{Atos: Bull SAS R\&D Labs}{\origdate\daterange{2020-02-01}{2020-07-31}}{Quantum computing researcher}{Les Clayes-sous-Bois}
-\item Researched and explored state-of-the-art quantum algorithms and technologies, under the direct supervision of Bertrand Marchand and Cyril Allouche. 
-\item Tested and implemented the algorithms on the \textit{Atos Quantum Learning Machine} simulator.
-\end{rSubsection}
+  \item \emph{Supervisors}: Bertrand Marchand and Cyril Allouche.
+  \item Implemented novel simulation strategies for quantum circuits targeting
+    NISQ architecture
+  \item Explored the \emph{barren plateau problem} in quantum neural network.
+    % \item Tested and implemented algorithms on the \textit{Atos Quantum Learning Machine} simulator.
+  \end{rSubsection}
 
-% ATOS QUANTUM
-% \begin{rSubsection}{Atos: HPC \& Quantum team}{July 2019--January 2020}{Quantum computing researcher}{Milano}
-\begin{rSubsection}{Atos: HPC \& Quantum team}{\origdate\daterange{2019-07-01}{2020-01-31}}{Quantum computing researcher}{Milano}
-\item Configured both the hardware and software of the \textit{Atos Quantum Learning Machine} appliance.
-\item Used the \textit{Atos Quantum Learning Machine} software simulation stack to develop well-known quantum algorithms.
-\item Taken internal courses on the advanced usage of the \textit{Atos Quantum Learning Machine}.
+  % ATOS QUANTUM
+  % \begin{rSubsection}{Atos: HPC \& Quantum team}{July 2019--January 2020}{Quantum computing researcher}{Milano}
+  \begin{rSubsection}{Atos: HPC \& Quantum team}{\origdate\daterange{2019-07-01}{2020-01-31}}{Quantum computing researcher}{Milano}
+  \item Configured hardware/software stack of the \textit{Atos Quantum Learning Machine} appliance.
+  \item Implemented well-known quantum algorithms on the \textit{Atos Quantum
+      Learning Machine} appliance.
 \item Lectured external customers on the \textit{Atos Quantum Learning Machine} software stack.
+% \item Taken internal courses on the advanced usage of the \textit{Atos Quantum Learning Machine}.
 \end{rSubsection}
 
 \end{rSection}
@@ -159,44 +200,34 @@
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Teaching Experience}
 
-  \begin{rSubsection}{Teaching assistant}{2021-22;\ 22-23}{Informatica (per Aerospaziali)}{Prof.\ Gerardo Pelosi}
-  \item Exercise lectures: computer science for Aerospace Engineering.
-  \item Topics addressed (partial): Boolean logic and basics of C programming.
-  \end{rSubsection}
-  \begin{rSubsection}{Teaching assistant}{2020-21;\ 21-22;\ 22-23}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
+  \begin{rSubsection}{Teaching assistant}{2020-21;\ 21-22;\ 22-23;\ 23-24}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
   \item Exercise lectures: Linux Operating Systems.
   \item Topics addressed (partial): parallel programming (processes, threads),
     task scheduler, system calls and interrupt routines, memory management, file
     systems and I/O.
   \end{rSubsection}
-  \begin{rSubsection}{Teaching assistant}{2022-23}{Computer Architectures and
+  \begin{rSubsection}{Teaching assistant}{2021-22;\ 22-23;\ 23-24}{Computer Architectures and
       Operating Systems}{Prof.ssa Cristina Silvano }
   \item Exercise lectures: Linux Operating Systems.
   \item Topics addressed (partial): parallel programming (processes, threads),
     task scheduler, system calls and interrupt routines, memory management, file
     systems and I/O.
   \end{rSubsection}
-
-  % \begin{rSubsection}{Teaching assistant}{2020}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
-  % \item Held 29 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
-  % \end{rSubsection}
-%   \begin{rSubsection}{Teaching assistant}{2022}{Informatica (per Aerospaziali)}{Prof.\ Gerardo Pelosi}
-%   \item Held 18 hours of exercise lectures. Among the topics addressed:
-%     Boolean logic and basics of C programming  
-%   \end{rSubsection}
-%   \begin{rSubsection}{Teaching assistant}{2021}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
-%   \item Held 34 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
-%   \end{rSubsection}
-
-% \begin{rSubsection}{Teaching assistant}{2020}{Computer Architectures and Operating Systems}{Prof.\ Gerardo Pelosi}
-% \item Held 29 hours of exercise lectures for the Operating Systems part. Among other topics addressed:  parallel programming (processes, threads), Linux intro, task scheduler, memory management, file systems and I/O
-% \end{rSubsection}
-
+  \begin{rSubsection}{Teaching assistant}{2023-24}{Computer Architectures and
+      Operating Systems}{Prof. Federico Terraneo }
+  \item Exercise lectures: Linux Operating Systems.
+  \item Topics addressed (partial): parallel programming (processes, threads),
+    task scheduler, system calls and interrupt routines, memory management, file
+    systems and I/O.
+  \end{rSubsection}
+  \begin{rSubsection}{Teaching assistant}{2021-22;\ 22-23}{Informatica (per Aerospaziali)}{Prof.\ Gerardo Pelosi}
+  \item Exercise lectures: computer science for Aerospace Engineering.
+  \item Topics addressed (partial): Boolean logic and basics of C programming.
+  \end{rSubsection}
 \begin{rSubsection}{Teaching tutor}{2019}{Informatica (per Ambientali)}{Prof.\ Andrea Bonarini}
 \item Theory lectures and laboratory exercises on the C programming language.
 % https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=691950&polij_device_category=DESKTOP&__pj0=0&__pj1=ee13b0b6c0f983f39edcd5af2ad25bd3
 \end{rSubsection}
-
 \begin{rSubsection}{Teaching tutor}{2018}{Computer Architectures and Operating Systems}{Prof.ssa Anna Maria Antola}
 \item Theory lectures and lab exercises regarding both the architectures of
   modern computers (ranging from the assembly language to the logic gates) and
@@ -205,6 +236,26 @@
 % https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=667442&polij_device_category=DESKTOP&__pj0=0&__pj1=f7cded5163ff00a70c340961c9ce685c
 \end{rSubsection}
 \end{rSection}
+\clearpage
+\begin{rSection}{List of publications}
+  \begin{tSubPublications}{Journals}{J}
+  \item \fullcite{perriello2023ImprovingEfficiencyQuantum}
+  \end{tSubPublications}
+  \begin{tSubPublications}{Conferences}{C}
+  \item \fullcite{DBLP:conf/qce/PerrielloBP21}
+  \item \fullcite{DBLP:conf/securecomm/PerrielloBP21}
+  \end{tSubPublications}
+\end{rSection}
+\begin{rSection}{Scientific Community roles}
+  \begin{rSubsection}{Reviewer}{}{}{}
+  \item \fullcite{DBLP:conf/icissp/2023}
+  \item \fullcite{DBLP:conf/acisp/2023}
+  \item \fullcite{DBLP:conf/iccad/2021}
+  \end{rSubsection}
+\end{rSection}
+% \begin{rSection}{Awards and Recognition}
+
+% \end{rSection}
 \vfill
 \ifpublic{%
     \input{gdpr_en}
