@@ -23,7 +23,6 @@
 % ----------------------------------------------------------------------------------------
 
 \ProvidesClass{tresume}[2023/11/01 v0.1 Resume class]
-
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % Pass through any options to the base class
 \ProcessOptions\relax % Process given options
 
@@ -34,11 +33,10 @@
 % ----------------------------------------------------------------------------------------
 
 \RequirePackage[parfill]{parskip} % Remove paragraph indentation
-\RequirePackage{array} % Required for bold tabular columns
+% \RequirePackage{array} % Required for bold tabular columns
 \RequirePackage{ifthen} % Required for ifthenelse statements
-% \RequirePackage{graphicx} % Required for including images
 \RequirePackage{enumitem} % For lists advanced commands
-\RequirePackage{changepage}
+\RequirePackage{changepage} % To change indentation of pages in tSection
 \pagestyle{empty} % Suppress headers and footers on all pages
 
 % ----------------------------------------------------------------------------------------
@@ -66,10 +64,7 @@
   \bigskip\break % Vertical whitespace below name
 	\endgroup
 }
-% output name automatically
-\let\ori@document=\document % Store the original \document command
-\renewcommand{\document}{
-	\ori@document  % Output the original \document command but add to it below
+\AtBeginDocument{%
 	\printname % Output the user's name
 }
 
@@ -117,3 +112,34 @@
   \end{enumerate}
 	\vspace{0.5em} % Vertical whitespace after the end of the list
 }
+%%%%% IFs
+\newif\ifxetexorluatex\xetexorluatexfalse
+\ifxetex
+  \xetexorluatextrue
+\fi
+\ifluatex
+  \xetexorluatextrue
+\fi
+
+\newif\ifpublic{}
+\newif\ifgdpr{}
+% by default it is set to false
+\publicfalse{}
+\gdprfalse{}
+
+% FONTS
+\ifxetexorluatex
+  \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
+  \setmainfont[
+  BoldFont={EBGaramond-Bold.otf},
+  ItalicFont={EBGaramond-Italic.otf},
+  BoldItalicFont={EBGaramond-BoldItalic.otf},
+  WordSpace=1.25
+  ]{EBGaramond-Regular.otf}
+  \setmathfont{Garamond-Math.otf}[StylisticSet={3}]
+  % \setmonofont[Scale=MatchLowercase]{Source Code Pro}
+\else
+  \usepackage[lf]{ebgaramond}
+  % \usepackage[oldstyle,scale=0.7]{sourcecodepro}
+  \singlespacing
+\fi
