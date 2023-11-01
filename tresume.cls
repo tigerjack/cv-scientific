@@ -51,7 +51,7 @@
 	bottom=1.5cm, % Bottom margin
 	left=2.1cm, % Left margin
 	right=2.1cm, % Right margin
-	showframe, % Uncomment to show how the type block is set on the page
+	% showframe, % Uncomment to show how the type block is set on the page
 }
 
 % ----------------------------------------------------------------------------------------
