@@ -15,9 +15,8 @@ backend      = biber,
 doi          = true,
 url          = true,
 hyperref     = true,
-sortlocale   = en-GB,
-% style        = alphabetic,
-style        = iso-alphabetic,
+% sortlocale   = en-GB,
+% style        = iso-alphabetic,
 language=english,
 % next two for bibliography overfull
 % https://tex.stackexchange.com/a/442317/80949 block=ragged,
@@ -25,8 +24,6 @@ block=space,
 ]{biblatex}
 \addbibresource{papers.bib}
 \addbibresource{reviews.bib}
-%
-
 %
 \usepackage{tabularray}
 
@@ -79,7 +76,7 @@ block=space,
   %
   \begin{tSubsection}{IELTS}{\printdate{2016-02-01}}{English certificate}{}
   \item Thesis title: \textit{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
-  \item Grade 7.5/9 (equivalent to C1 of CEFR)
+  \item Grade: 7.5/9 (equivalent to C1 of CEFR)
   \end{tSubsection}
 \end{tSection}
 %--------------------------------------------------------------------------------
@@ -100,13 +97,13 @@ block=space,
   During my internship at Atos, I extended my research by enhancing quantum
   algorithm simulations for Noisy Intermediate-Scale Quantum (NISQ)
   architectures. I created a versatile quantum simulation library capable of
-  simulating systems with hundreds of qubits, targeted for the Atos' Quantum
-  Learning Machine environment. The library was extensively used to replicate
-  state of the art experimental results related to the challenging \emph{barren
-    plateau problem} in quantum neural networks.
+  simulating systems with hundreds of qubits, targeted for the Atos'
+  \emph{Quantum Learning Machine (QLM)} environment. The library was extensively
+  used to replicate state of the art experimental results related to the
+  challenging \emph{barren plateau problem} in quantum neural networks.
 
-  My Ph.D.\ research centered on \emph{quantum cryptanalysis} of Post-Quantum
-  Cryptography (PQC). I proposed the first complete design of quantum circuits
+  My Ph.D.\ research centered on \emph{quantum cryptanalysis} of post-quantum
+  cryptography. I proposed the first complete design of quantum circuits
   tailored to attack the hardness assumptions in code-based crpytography,
   evaluating the computational complexity of attacking all the code-based
   cryptosystems under international scrutiny.
