@@ -149,23 +149,3 @@
 	\end{list}
 	\vspace{0.5em} % Vertical whitespace after the end of the list
 }
-
-% mine addition
-\newenvironment{tSubPublications}[2]{ %
-	\textbf{#1} \hfill  % Bold company name 
-	\smallskip % Vertical whitespace
-  \begin{enumerate}[label=\textbf{#2\arabic*.}, left=0pt]
-  }{
-  \end{enumerate}
-	\vspace{0.5em} % Vertical whitespace after the end of the list
-}
-
-\newenvironment{rSubPublications}[2]{ % 4 parameters: name, enum prefix
-	\textbf{#1} \hfill  % Bold company name 
-	\smallskip % Vertical whitespace
-	\begin{enumerate}[label=\textbf{#2\arabic*}, left=0pt] % \cdot used for bullets, no indentation
-		% \setlength{\itemsep}{-0.5em} \vspace{-0.5em} % Reduce vertical spacing between items in the list for a tighter look
-}{
-	\end{enumerate}
-	% \vspace{0.5em} % Vertical whitespace after the end of the list
-}
