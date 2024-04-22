@@ -96,4 +96,64 @@
   pagetotal = {40},
   keywords = {code-based cryptography,Grover,Information Set Decoding,ISD,Lee–Brickell,Post-quantum cryptography,Prange,public-key encryption}
 }
-
+@inproceedings{perriello2024QuantumCircuitDesign,
+  title = {Quantum Circuit Design for the Lee-Brickell Based Information Set Decoding},
+  booktitle = {Applied {{Cryptography}} and {{Network Security}} Workshops - {{ACNS}} 2024 Satellite Workshops, {{ACNS}}},
+  author = {Perriello, Simone and Barenghi, Alessandro and Pelosi, Gerardo},
+  date = {2024},
+  series = {Lecture Notes in Computer Science},
+  pages = {to appear},
+  publisher = {{Springer}},
+  location = {{Abu Dhabi, UAE}},
+  bibtex_show = {true},
+    doi = {10.1007/978-3-031-XXXXX-XXX},
+    html = {},
+  abstract = {In the race for quantum-safe cryptography, fostered by the ongoing
+                  National Institute of Standards and Technology (NIST)
+                  post-quantum standardization process, it is crucial to assess
+                  the security of the emerging cryptoschemes. In this work, we
+                  propose a fully quantum algorithm to accelerate the
+                  Lee-Brickell's Information Set Decoding (ISD) on binary error
+                  correcting codes — one of the main cryptanalytic techniques
+                  used for assessing the security of code-based cryptoschemes.
+                  Our solution relies on a careful scheduling of the quantum
+                  gates included in the circuit design, coupled with a strategy
+                  that applies multiple times the oracle-reflection, from a
+                  Grover-like search, within a single Grover iteration. Compared
+                  with the state-of-the-art alternatives, our solution shows a
+                  reduction of the circuit depth ranging between 2^3 and 2^26,
+                  when considering the parameters sets for code-based
+                  cryptosystems advanced to the fourth round of the NIST
+                  process. Denoting as t and t-p the two sets of bit flips
+                  tackled by the Lee-Brickell's strategy, as an additional
+                  noteworthy fact we show that our solution exhibits 1 as the
+                  best value for p instead of 2 as it is the case for the
+                  classic ISD. }
+}
+@inproceedings{lancellotti2023DesignQuantumWalkConf,
+  title = {Design of a Quantum Walk Circuit to Solve the Subset-Sum Problem},
+  booktitle = {61st {{ACM}}/{{IEEE}} Design Automation Conference, {{DAC}} 2024, San Francisco, {{CA}}, {{USA}}, July 23-27, 2024},
+  author = {Lancellotti, Giacomo and Perriello, Simone and Barenghi, Alessandro and Pelosi, Gerardo},
+  date = {2024},
+  publisher = {ACM},
+  doi = {10.1145/3649329.3657337},
+  url = {https://doi.org/10.1109/DAC56929.2023},
+  abstract = {Search algorithms based on quantum walks have emerged as a
+                  promising approach to solve computational problems across
+                  various domains, including combinatorial optimization, and
+                  cryptography. Stating a generic search problem in terms of a
+                  (quantum) search over a graph makes the efficiency of the
+                  algorithmic method depend on the structure of the graph
+                  itself. In this work, we propose a complete implementation of
+                  a quantum walk search on Johnson graphs, speeding up the
+                  solution of the subset-sum problem. We provide a detailed
+                  design of each sub-circuit, quantifying their cost in terms of
+                  gate number, depth, and width. We compare our solution against
+                  a Grover quantum search, showing a reduction of the T-count
+                  and T-depth for practically solvable problems. The proposed
+                  design provides a building block for the construction of
+                  efficient quantum search algorithms that can be modelled on
+                  Johnson graphs, filling the gap with the existing theoretical
+                  complexity analyses.},
+  bibtex_show = {true},
+}
