@@ -38,6 +38,7 @@
 \RequirePackage{enumitem} % For lists advanced commands
 \RequirePackage{changepage} % To change indentation of pages in tSection
 \pagestyle{empty} % Suppress headers and footers on all pages
+\RequirePackage{etaremune}
 
 % ----------------------------------------------------------------------------------------
 %	MARGINS
@@ -106,10 +107,13 @@
 \newenvironment{tSubPublications}[2]{ % #1 Type of publication, #2 prefix
 	\textbf{#1} \hfill  %
 	\smallskip % Vertical whitespace
-  \begin{enumerate}[label=\textbf{#2\arabic*.}, left=0pt]
+  % \begin{etaremune}[label=\textbf{#2\arabic*.}, left=0pt]
+  \renewcommand*{\labelenumi}{[\labelprefix\theenumi]}
+  \def\labelprefix{#2}
+  \begin{etaremune}
 		\setlength{\itemsep}{-0.5em} \vspace{-0.5em} % Reduce vertical spacing between items in the list for a tighter look
   }{
-  \end{enumerate}
+  \end{etaremune}
 	\vspace{0.5em} % Vertical whitespace after the end of the list
 }
 %%%%% IFs
