@@ -23,9 +23,10 @@ maxcitenames=4
 %
 \usepackage{tabularray}
 
-\name{Simone Perriello} % Your name
+\name{Simone Perriello}
 
-\publictrue
+% NOTE change these flags to have different outputs
+\publicfalse
 \gdprfalse
 
 \begin{document}
@@ -34,7 +35,10 @@ maxcitenames=4
         column{1,3} = {font=\itshape},
         width=\textwidth,
       }
-      Email   & \href{mailto:simone.perriello@polimi.it}{simone.perriello@polimi.it}                    & Website  & \href{https://perriello.faculty.polimi.it}{https://perriello.faculty.polimi.it}
+      Email   & \href{mailto:simone.perriello@polimi.it}{simone.perriello@polimi.it}                 & Website  & \href{https://perriello.faculty.polimi.it}{https://perriello.faculty.polimi.it}
+      ORCID   &
+      \href{https://orcid.org/0000-0001-9656-7252}{0000-0001-9656-7252}
+      & Lab Website  & \href{https://www.deib.polimi.it/}{https://www.deib.polimi.it/}
     \end{tblr}
   }
 \else{%
@@ -53,8 +57,13 @@ maxcitenames=4
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 \begin{tSection}{Education}
-  % PHD
-  \begin{tSubsection}{Politecnico di Milano}{since \printdate{2019-11-01}}{Ph.D.\ candidate}{Milan}
+  % PostDoc
+  \begin{tSubsection}{Politecnico di Milano}{since \printdate{2024-05-16}}{PostDoc}{Milan}
+  \item Project 1: Quantum Cryptanalysis of Symmetric and Asymmetric Cryptosystems
+  % \item Advisors: Prof.\ \emph{Gerardo Pelosi}; Prof.\ \emph{Alessandro Barenghi}
+  \end{tSubsection}
+  % PhD
+  \begin{tSubsection}{Politecnico di Milano}{\printdate{2024-05-15}}{Ph.D.}{Milan}
   \item Thesis title: \emph{Quantum Circuits for Information Set Decoding: Quantum Cryptanalysis of Code-Based Cryptosystems}
   \item Advisors: Prof.\ \emph{Gerardo Pelosi}; Prof.\ \emph{Alessandro Barenghi}
   \end{tSubsection}
@@ -66,10 +75,10 @@ maxcitenames=4
   \item Grade: 110/110
   \end{tSubsection}
   % 
-  \begin{tSubsection}{IELTS}{\printdate{2016-02-01}}{English certificate}{}
-  \item Thesis title: \textit{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
-  \item Grade: 7.5/9 (equivalent to C1 of CEFR)
-  \end{tSubsection}
+  % \begin{tSubsection}{IELTS}{\printdate{2016-02-01}}{English certificate}{}
+  % \item Thesis title: \textit{Quantum Computing Algorithms for Cryptography: design, validation and complexity assessment}
+  % \item Grade: 7.5/9 (equivalent to C1 of CEFR)
+  % \end{tSubsection}
   % 
   \begin{tSubsection}{Unisannio}{\printdate{2015-07-22}}{B.Sc.\ Degree}{Benevento}
   \item Thesis title: \textit{Un algoritmo per il social tagging di mashup}
@@ -84,7 +93,7 @@ maxcitenames=4
   My research journey has evolved from my B.Sc. thesis on \emph{recommender
     systems} to my current focus on \emph{quantum computing} and
   \emph{cryptography}. My current focus revolves around the meticulous design of
-  quantum algorithms within the gate model, specifically aimed at addressing
+  quantum algorithms within the gate-based model, specifically aimed at addressing
   challenges in code-based cryptosystems.
 
   During my Bachelor's studies, I specialized in designing a recommendation
