@@ -20,13 +20,14 @@ maxcitenames=4
 ]{biblatex}
 \addbibresource{papers.bib}
 \addbibresource{reviews.bib}
+\addbibresource{service.bib}
 %
 \usepackage{tabularray}
 
 \name{Simone Perriello}
 
 % NOTE change these flags to have different outputs
-\publicfalse
+\publictrue
 \gdprfalse
 
 \begin{document}
@@ -35,10 +36,10 @@ maxcitenames=4
         column{1,3} = {font=\itshape},
         width=\textwidth,
       }
-      Email   & \href{mailto:simone.perriello@polimi.it}{simone.perriello@polimi.it}                 & Website  & \href{https://perriello.faculty.polimi.it}{https://perriello.faculty.polimi.it}
+      Email   & \href{mailto:simone.perriello@polimi.it}{simone.perriello@polimi.it}                 & Website  & \href{https://perriello.faculty.polimi.it}{https://perriello.faculty.polimi.it}\\
       ORCID   &
       \href{https://orcid.org/0000-0001-9656-7252}{0000-0001-9656-7252}
-      & Lab Website  & \href{https://www.deib.polimi.it/}{https://www.deib.polimi.it/}
+      & Lab Website  & \href{https://www.heaplab.deib.polimi.it}{https://www.heaplab.deib.polimi.it}
     \end{tblr}
   }
 \else{%
@@ -230,6 +231,7 @@ maxcitenames=4
   \item \fullcite{perriello2023ImprovingEfficiencyQuantum}
   \end{tSubPublications}
   \begin{tSubPublications}{Refereed International Conferences}{C}
+  \item \fullcite{perriello2024AQuantumCircuitToExecuteAK}
   \item \fullcite{lancellotti2023DesignQuantumWalkConf}
   \item \fullcite{perriello2024QuantumCircuitDesign}
   \item \fullcite{DBLP:conf/qce/PerrielloBP21}
@@ -245,7 +247,7 @@ maxcitenames=4
 %
 \begin{tSection}{Reviewer for International Journals and Conferences}
   \begin{tSubsection}{2024}{}{}{}
-  \item \fullcite{DBLP:conf/qce/2024}
+  \item \fullcite{qce2024}
   \item \fullcite{tifs}, Impact Factor: 6.8, SCImago Journal Rank (SJR) 2023: 2.89 (Q1)
   \item \fullcite{tetc}, Impact Factor: 5.9, SCImago Journal Rank (SJR) 2023:
     1.57 (Q1)
@@ -266,9 +268,7 @@ maxcitenames=4
 \begin{tSection}{Program Committee member}
   \begin{tSubsection}{2024}{}{}{}
   % \begin{tSubPublications}{Program Committee member}{PC}
-  \item \emph{IEEE International Conference on Quantum Computing and
-      Engineering, QCE 2024, Montréal, Québec, Canada, September 15–20, 2024. IEEE
-      2024, ISBN XXX}
+    \item \fullcite{service_qce2024}
   % \end{tSubPublications}
 \end{tSubsection}
 \end{tSection}
@@ -282,6 +282,14 @@ maxcitenames=4
       Computer Architecture and Compilation for High-performance Embedded
       Systems}.
   \end{itemize}
+\end{tSection}
+
+\begin{tSection}{Other academic achievements, honors, and activities}
+  \begin{tSubsection}{2024}{}{}{}
+    \item Session chair for the session titled \emph{Application for Data
+        Analysis} at~\fullcite{service_qce2024}
+  \end{tSubsection}
+
 \end{tSection}
 \vfill
 \ifpublic{%
