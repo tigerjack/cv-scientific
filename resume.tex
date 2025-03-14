@@ -55,19 +55,45 @@ maxcitenames=4
 \fi
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%	ACADEMIC EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-\begin{tSection}{Education}
+\begin{tSection}{Academic Experience}
   % PostDoc
-  \begin{tSubsection}{Politecnico di Milano}{since \printdate{2024-05-16}}{PostDoc}{Milan}
+  \begin{tSubsection}{Politecnico di Milano}{since \printdate{2024-05-16}}{Postdoctoral Researcher}{Milan}
   \item Project 1: Quantum Cryptanalysis of Symmetric and Asymmetric Cryptosystems
-  % \item Advisors: Prof.\ \emph{Gerardo Pelosi}; Prof.\ \emph{Alessandro Barenghi}
+  \item Project 2: Quantum Acceleration of Clique Problems
   \end{tSubsection}
   % PhD
   \begin{tSubsection}{Politecnico di Milano}{\printdate{2024-05-15}}{Ph.D.}{Milan}
   \item Thesis title: \emph{Quantum Circuits for Information Set Decoding: Quantum Cryptanalysis of Code-Based Cryptosystems}
   \item Advisors: Prof.\ \emph{Gerardo Pelosi}; Prof.\ \emph{Alessandro Barenghi}
   \end{tSubsection}
+\end{tSection}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{tSection}{Work Experience}
+% R&D Bull SAS
+  \begin{tSubsection}{Atos: Bull SAS R\&D Labs}{\origdate\daterange{2020-02-01}{2020-07-31}}{Quantum computing researcher}{Les Clayes-sous-Bois}
+  \item \emph{Supervisors}: \emph{Bertrand Marchand} and \emph{Cyril Allouche}
+  \item Implemented novel simulation strategies for quantum circuits targeting
+    NISQ architecture.
+  \item Explored the \emph{barren plateau problem} in quantum neural network.
+    % \item Tested and implemented algorithms on the \textit{Atos Quantum Learning Machine} simulator.
+  \end{tSubsection}
+
+  % ATOS QUANTUM
+  \begin{tSubsection}{Atos: HPC \& Quantum team}{\origdate\daterange{2019-07-01}{2020-01-31}}{Quantum computing researcher}{Milan}
+  \item Configured hardware/software stack of the \textit{Atos QLM} appliance.
+  \item Implemented well-known quantum algorithms on the \textit{Atos QLM} framework.
+  \item Lectured external customers on the \textit{Atos QLM} framework.
+\end{tSubsection}
+\end{tSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{tSection}{Education}
   % MASTER
   \begin{tSubsection}{Politecnico di Milano}{\printdate{2019-04-17}}{M.Sc.\ degree}{Milan}
   \item Thesis title: \emph{Design and developments of quantum circuits to solve the Information Set Decoding problem}
@@ -91,92 +117,12 @@ maxcitenames=4
 %    RESEARCH
 %-----------------------------------------------------------------------------------------------
 \begin{tSection}{Research interests}
-  My research journey has evolved from my B.Sc. thesis on \emph{recommender
-    systems} to my current focus on \emph{quantum computing} and
-  \emph{cryptography}. My current focus revolves around the meticulous design of
-  quantum algorithms within the gate-based model, specifically aimed at addressing
-  challenges in code-based cryptosystems.
+    My research focuses on \emph{quantum computing} and \emph{quantum cryptanalysis}, with a particular emphasis on code-based cryptography. During my Master's thesis, I designed quantum circuits adapting the \emph{Information Set Decoding (ISD)} strategy, the most efficient known attack on code-based cryptosystems, implementing and benchmarking these techniques using IBM’s Qiskit framework. I expanded this work during my Ph.D. by designing optimized quantum circuits to evaluate the complexity of attacking all major code-based cryptographic schemes under international evaluation. The research led to significant reductions in attack complexity, improving efficiency by factors ranging from $2^{19}$ to $2^{30}$ compared to previous approaches.
 
-  During my Bachelor's studies, I specialized in designing a recommendation
-  system tailored for enhancing social tagging of mashups \textemdash{} web
-  applications that integrate data and functionalities from diverse sources to
-  enhance the overall user experience. %
-  The principal goal of this project was to enhance the core of the mashup
-  tagging process by optimizing the recommender system. This optimization was
-  achieved through systematic social data merging and the discernment of
-  potential user relationships.
+During my time at Atos' R\&D laboratories, I developed a quantum simulation library for Noisy Intermediate-Scale Quantum (NISQ) architectures, enabling large-scale simulations on the \emph{Quantum Learning Machine (QLM)}. This tool was instrumental in reproducing state-of-the-art results on quantum neural networks, particularly in studying the \emph{barren plateau problem}.
 
-  % The primary objective of this project was to improve the recommender system
-  % at the core of the mashup tagging process through the social data merging,
-  % the uncovering of potential user relationship.
-  %
-  % by advancing social data merging and
-  % uncovering potential user relations. The emphasis was on refining the
-  % recommender system
-  %
-  % tagging process within Web 2.0 systems, ensuring a more effective and
-  % user-centric approach to suggesting tags based on enriched social data and
-  % identified user relationships.
-  %
-  % Employing no-SQL databases, the project aimed to merge social data,
-  % identify potential user relations, and spotlight community leaders. This
-  % initiative significantly contributed to the improvement of the tagging
-  % process at the core of Web 2.0 systems.
+As a Postdoctoral researcher, I continue to explore the intersection of quantum algorithm design and cryptographic security, contributing to the study of post-quantum cryptographic resilience. My current research also extends to the design of quantum algorithms for graph-related problems, such as clique detection, and optimizing input state preparation techniques.
 
-  Building on this foundation, my Master's program became a platform for a
-  self-guided exploration of quantum computing. This journey culminated in my
-  thesis, during which I developed a quantum adaptation of the \emph{Information
-    Set Decoding (ISD)} strategy, the most efficient kind of attack against
-  cryptosystems based on linear codes. The implementation of those attacks was
-  based on IBM's open source Qiskit framework, to which I also contributed
-  several patches.
-
-  During my internship at Atos, I extended my research by enhancing quantum
-  algorithm simulations for Noisy Intermediate-Scale Quantum (NISQ)
-  architectures. I created a versatile quantum simulation library capable of
-  simulating systems with hundreds of qubits, targeted for the Atos'
-  \emph{Quantum Learning Machine (QLM)} environment. The library was extensively
-  used to replicate state of the art experimental results related to the
-  challenging \emph{barren plateau problem} in quantum neural networks.
-
-  My Ph.D.\ research centred on \emph{quantum cryptanalysis} of post-quantum
-  cryptography. I proposed the first complete design of quantum circuits
-  tailored to attack the hardness assumptions in code-based cryptography,
-  evaluating the computational complexity of attacking all the code-based
-  cryptosystems under international scrutiny.
-  %
-  Comprehensive assessments and comparisons, which considered both theoretical
-  and practical implementations for quantum ISD introduced in the years
-  following my initial work, confirmed the substantial advantage of my
-  contribution, with performance surpassing other approaches by a significant
-  margin, ranging from $2^{19}$ to $2^{30}$.
-
-  During this process, I also designed a range of practical quantum circuits
-  that can be of independent interests --- to sort bitstrings, to permute matrix
-  columns, to perform Gauss-Jordan Elimination on a matrix, and to check the
-  weight of a given bitstring.
-
-\end{tSection}
-\clearpage
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-\begin{tSection}{Work Experience}
-% R&D Bull SAS
-  \begin{tSubsection}{Atos: Bull SAS R\&D Labs}{\origdate\daterange{2020-02-01}{2020-07-31}}{Quantum computing researcher}{Les Clayes-sous-Bois}
-  \item \emph{Supervisors}: \emph{Bertrand Marchand} and \emph{Cyril Allouche}
-  \item Implemented novel simulation strategies for quantum circuits targeting
-    NISQ architecture.
-  \item Explored the \emph{barren plateau problem} in quantum neural network.
-    % \item Tested and implemented algorithms on the \textit{Atos Quantum Learning Machine} simulator.
-  \end{tSubsection}
-
-  % ATOS QUANTUM
-  \begin{tSubsection}{Atos: HPC \& Quantum team}{\origdate\daterange{2019-07-01}{2020-01-31}}{Quantum computing researcher}{Milan}
-  \item Configured hardware/software stack of the \textit{Atos QLM} appliance.
-  \item Implemented well-known quantum algorithms on the \textit{Atos QLM} framework.
-  \item Lectured external customers on the \textit{Atos QLM} framework.
-\end{tSubsection}
 \end{tSection}
 %----------------------------------------------------------------------------------------
 %	TEACHING
@@ -225,7 +171,6 @@ maxcitenames=4
 % https://www11.ceda.polimi.it/schedaincarico/schedaincarico/controller/scheda_pubblica/SchedaPublic.do?&evn_default=evento&c_classe=667442&polij_device_category=DESKTOP&__pj0=0&__pj1=f7cded5163ff00a70c340961c9ce685c
 \end{tSubsection}
 \end{tSection}
-\clearpage
 \begin{tSection}{List of publications}
   \begin{tSubPublications}{Refereed International Journals}{J}
   \item \fullcite{perriello2023ImprovingEfficiencyQuantum}
@@ -246,10 +191,13 @@ maxcitenames=4
 \end{tSection}
 %
 \begin{tSection}{Reviewer for International Journals and Conferences}
+  \begin{tSubsection}{2025}{}{}{}
+  \item \fullcite{fgcs25}
+  \end{tSubsection}
   \begin{tSubsection}{2024}{}{}{}
   \item \fullcite{qce2024}
-  \item \fullcite{tifs}, Impact Factor: 6.8, SCImago Journal Rank (SJR) 2023: 2.89 (Q1)
-  \item \fullcite{tetc}, Impact Factor: 5.9, SCImago Journal Rank (SJR) 2023:
+  \item \fullcite{tifs24}, Impact Factor: 6.8, SCImago Journal Rank (SJR) 2023: 2.89 (Q1)
+  \item \fullcite{tetc24}, Impact Factor: 5.9, SCImago Journal Rank (SJR) 2023:
     1.57 (Q1)
   \end{tSubsection}
   \begin{tSubsection}{2023}{}{}{}
@@ -265,7 +213,6 @@ maxcitenames=4
 %   \end{itemize}
 % \end{tSection}
 %
-\clearpage
 \begin{tSection}{Program Committee member}
   \begin{tSubsection}{2024}{}{}{}
   % \begin{tSubPublications}{Program Committee member}{PC}
