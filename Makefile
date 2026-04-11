@@ -1,5 +1,5 @@
 # Define the main LaTeX file and output directory
-MAIN_FILE = resume.tex
+MAIN_FILE = resume.tex flags.tex *.bib
 MAIN_FILE_NO_EXT = $(basename $(MAIN_FILE))
 MAIN_DEPENDENCIES = $(wildcard *.bib)
 PDF_TARGET = $(MAIN_FILE:.tex=.pdf)
